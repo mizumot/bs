@@ -4,11 +4,11 @@ bs
 Basic Statistics Calculator
 
 
-## About
+### About
 You can check out this application here:
 - http://langtest.jp:3838/bs
 
-## Author
+### Author
 Atsushi MIZUMOTO, Ph.D.
 Associate Professor of Applied Linguistics
 Faculty of Foreign Language Studies/
