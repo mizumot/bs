@@ -75,7 +75,7 @@ shinyServer(function(input, output) {
     output$qqPlot <- renderPlot({
         x <- input$textarea.in
         x <- as.numeric(unlist(strsplit(x, "[\n, \t]")))
-        qqnorm(x)
+        qqnorm(x, las=1)
         qqline(x, col=2)
     })
     
