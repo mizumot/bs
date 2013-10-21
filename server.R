@@ -46,7 +46,7 @@ shinyServer(function(input, output) {
         counts <- simple.bincount(x, breaks)
         counts.max <- max(counts)
         
-        h <- hist(x, na.rm=T, breaks="FD", xlab= "Red vertical line shows the mean.",
+        h <- hist(x, las=1, breaks="FD", xlab= "Red vertical line shows the mean.",
                   ylim=c(0, counts.max*1.2), main="", col = "cyan")
         rug(x)
         abline(v = mean(x, na.rm=T), col = "red", lwd = 2)
