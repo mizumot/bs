@@ -9,8 +9,9 @@ shinyUI(pageWithSidebar(
     sidebarPanel(
 
     p("Data input:"),
-
-    tags$textarea(id="textarea.in", rows=30, cols=10, "44\n32\n37\n44\n40\n44\n45\n36\n37\n42\n38\n47\n26\n41\n27\n39\n47\n41\n36\n44\n39\n49\n40\n25\n33\n39\n36\n45\n32\n51\n47\n39\n43\n38\n42\n35\n29\n33\n40\n37\n38\n34\n36\n43\n38\n39\n26\n30\n41\n35\n30\n39\n46\n39\n43\n46\n33\n48\n44\n45\n42\n45\n46\n53\n47\n47\n51\n33\n40\n43\n48\n37\n31\n40\n40\n49\n43\n49\n46\n38\n40\n51\n40\n44\n45\n53\n46\n42\n44\n46\n29\n38")
+    tags$textarea(id="textarea.in", rows=30, cols=10, "44\n32\n37\n44\n40\n44\n45\n36\n37\n42\n38\n47\n26\n41\n27\n39\n47\n41\n36\n44\n39\n49\n40\n25\n33\n39\n36\n45\n32\n51\n47\n39\n43\n38\n42\n35\n29\n33\n40\n37\n38\n34\n36\n43\n38\n39\n26\n30\n41\n35\n30\n39\n46\n39\n43\n46\n33\n48\n44\n45\n42\n45\n46\n53\n47\n47\n51\n33\n40\n43\n48\n37\n31\n40\n40\n49\n43\n49\n46\n38\n40\n51\n40\n44\n45\n53\n46\n42\n44\n46\n29\n38"),
+    p('Input values can be separated by', br(),
+      'newlines, spaces, commas, or tabs.')
     ),
 
 
@@ -25,9 +26,13 @@ mainPanel(
         br(),
 
         h3("Histogram"),
+        downloadButton('downloadDistPlot', 'Download the plot as pdf'),
+
         plotOutput("distPlot"),
 
         h3("Box plot with individual data points"),
+        downloadButton('downloadBoxPlot', 'Download the plot as pdf'),
+
         plotOutput("boxPlot"),
 
         h3("Test of normality"),
@@ -36,7 +41,15 @@ mainPanel(
         br(),
 
         h3("Q-Q plot"),
-        plotOutput("qqPlot", width="70%")
+        downloadButton('downloadQQPlot', 'Download the plot as pdf'),
+
+        plotOutput("qqPlot", width="70%"),
+
+        br(),
+        br(),
+
+        strong('R session info'),
+        verbatimTextOutput("info.out")
 
         ),
 
@@ -49,8 +62,9 @@ mainPanel(
 
         br(),
 
-        strong('Input values'),
-            p('Input values can be separated by newlines, spaces, commas, or tabs.'),
+        strong('List of Packages Used'), br(),
+        code('library(shiny)'),br(),
+        code('library(psych)'),br(),
 
         br(),
 
