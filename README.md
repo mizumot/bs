@@ -6,7 +6,7 @@ Basic Statistics Calculator
 
 ### About
 You can check out this application here:
-- http://langtest.jp:3838/bs
+- http://langtest.jp/shiny/bs
 
 ### Author
 [Atsushi MIZUMOTO](http://mizumot.com/ "mizumot.com"), Ph.D.   
