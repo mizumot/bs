@@ -62,7 +62,7 @@ shinyServer(function(input, output) {
 
 
     output$distPlot <- renderPlot({
-        print(makedistPlot()) # 上の function を参照する指定
+        print(makedistPlot())
     })
     
     
@@ -82,7 +82,7 @@ shinyServer(function(input, output) {
     
     
     output$boxPlot <- renderPlot({
-        print(makeboxPlot()) # 上の function を参照する指定
+        print(makeboxPlot())
     })
     
     
@@ -103,14 +103,14 @@ shinyServer(function(input, output) {
     }
     
     output$qqPlot <- renderPlot({
-        print(makeqqPlot()) # 上の function を参照する指定
+        print(makeqqPlot())
      })
     
     
     
     info <- reactive({
-        info1 <- paste("This analysis was conducted with ", strsplit(R.version$version.string, " \\(")[[1]][1], ".", sep = "")# バージョン情報
-        info2 <- paste("It was executed on ", date(), ".", sep = "")# 実行日時
+        info1 <- paste("This analysis was conducted with ", strsplit(R.version$version.string, " \\(")[[1]][1], ".", sep = "")
+        info2 <- paste("It was executed on ", date(), ".", sep = "")
         cat(sprintf(info1), "\n")
         cat(sprintf(info2), "\n")
     })

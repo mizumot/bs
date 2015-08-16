@@ -1,10 +1,10 @@
 library(shiny)
-library(psych)
+
 
 shinyUI(pageWithSidebar(
 
 
-    headerPanel("Basic Statistics Calculator - TEST"),
+    headerPanel("Basic Statistics Calculator"),
 
 
     sidebarPanel(
@@ -55,7 +55,7 @@ mainPanel(
 
         strong('Note'),
             p('This web application is developed with',
-            a("Shiny.", href="http://www.rstudio.com/shiny/", target="_blank"),
+            a("Shiny.", href="http://shiny.rstudio.com/", target="_blank"),
             ''),
 
         br(),
@@ -63,12 +63,13 @@ mainPanel(
         strong('List of Packages Used'), br(),
         code('library(shiny)'),br(),
         code('library(psych)'),br(),
+        code('library(beeswarm)'),br(),
 
         br(),
 
         strong('Code'),
             p('Source code for this application is based on',
-            a('Chapter 3 of "The handbook of Research in Foreign Language Learning and Teaching" (Takeuchi & Mizumoto, 2012).', href='http://mizumot.com/handbook/?page_id=109', target="_blank")),
+            a('"The handbook of Research in Foreign Language Learning and Teaching" (Takeuchi & Mizumoto, 2012).', href='http://mizumot.com/handbook/', target="_blank")),
 
             p('The code for this web application is available at',
             a('GitHub.', href='https://github.com/mizumot/bs', target="_blank")),
@@ -79,7 +80,17 @@ mainPanel(
             code('runGitHub("bs","mizumot")')
             ),
 
-        br(),
+            br(),
+
+        strong('Citation in Publications'),
+            p('Mizumoto, A. (2015). Langtest (Version 1.0) [Web application]. Retrieved from http://langtest.jp'),
+
+            br(),
+
+        strong('Article'),
+            p('Mizumoto, A., & Plonsky, L. (2015).', a("R as a lingua franca: Advantages of using R for quantitative research in applied linguistics.", href='http://applij.oxfordjournals.org/content/early/2015/06/24/applin.amv025.abstract', target="_blank"), em('Applied Linguistics,'), 'Advance online publication. doi:10.1093/applin/amv025'),
+
+            br(),
 
         strong('Recommended'),
             p('To learn more about R, I suggest this excellent and free e-book (pdf),',
