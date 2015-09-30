@@ -30,7 +30,9 @@ mainPanel(
 
         plotOutput("distPlot"),
 
-        h3("Box plot with individual data points"),
+        h3("Box plot"),
+
+        checkboxInput("beeswarm", label = strong("Plot individual data points."), value = T),
 
         plotOutput("boxPlot"),
 
