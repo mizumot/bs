@@ -77,7 +77,7 @@ shinyServer(function(input, output) {
         arrows(mean(x, na.rm=T), 0.9, mean(x, na.rm=T) + sd(x, na.rm=T), length = 0.1, angle = 45, col = "red")
         arrows(mean(x, na.rm=T), 0.9, mean(x, na.rm=T) - sd(x, na.rm=T), length = 0.1, angle = 45, col = "red")
 
-        if (input$beeswarm == 0) {
+        if (input$beeswarm == NULL) {
             
             NULL
             
